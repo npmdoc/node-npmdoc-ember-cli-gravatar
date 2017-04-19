@@ -1,9 +1,14 @@
-# api documentation for  [ember-cli-gravatar (v3.8.1)](https://github.com/johnotander/ember-cli-gravatar#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-ember-cli-gravatar.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ember-cli-gravatar) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ember-cli-gravatar.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ember-cli-gravatar)
+# npmdoc-ember-cli-gravatar
+
+#### api documentation for  [ember-cli-gravatar (v3.8.2)](https://github.com/johnotander/ember-cli-gravatar#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-ember-cli-gravatar.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ember-cli-gravatar) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ember-cli-gravatar.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ember-cli-gravatar)
+
 #### Component for gravatar image tags
 
-[![NPM](https://nodei.co/npm/ember-cli-gravatar.png?downloads=true)](https://www.npmjs.com/package/ember-cli-gravatar)
+[![NPM](https://nodei.co/npm/ember-cli-gravatar.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/ember-cli-gravatar)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-ember-cli-gravatar/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-ember-cli-gravatar_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-ember-cli-gravatar/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-ember-cli-gravatar/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-ember-cli-gravatar/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-ember-cli-gravatar/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-ember-cli-gravatar/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-ember-cli-gravatar/build/screenCapture.npmPackageListing.svg)
 
@@ -53,8 +58,8 @@
         "test": "tests"
     },
     "dist": {
-        "shasum": "9efb6295b7f906984e31a25e166aca1d8eff653f",
-        "tarball": "https://registry.npmjs.org/ember-cli-gravatar/-/ember-cli-gravatar-3.8.1.tgz"
+        "shasum": "627d6a71636266ba9fcc1ed7351009d01bb32bac",
+        "tarball": "https://registry.npmjs.org/ember-cli-gravatar/-/ember-cli-gravatar-3.8.2.tgz"
     },
     "ember-addon": {
         "configPath": "tests/dummy/config"
@@ -62,7 +67,7 @@
     "engines": {
         "node": ">= 0.10.0"
     },
-    "gitHead": "5eda531c72ab61ea2b50e200db4da6bc72a59ece",
+    "gitHead": "5550e6893cc09000ceba4ac76969f606bd07f1bb",
     "homepage": "https://github.com/johnotander/ember-cli-gravatar#readme",
     "keywords": [
         "gravatar",
@@ -73,13 +78,11 @@
     "license": "MIT",
     "maintainers": [
         {
-            "name": "johno",
-            "email": "johnotander@gmail.com"
+            "name": "johno"
         }
     ],
     "name": "ember-cli-gravatar",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/johnotander/ember-cli-gravatar.git"
@@ -89,59 +92,8 @@
         "start": "ember server",
         "test": "ember try:testall"
     },
-    "version": "3.8.1"
+    "version": "3.8.2"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module ember-cli-gravatar](#apidoc.module.ember-cli-gravatar)
-1.  [function <span class="apidocSignatureSpan">ember-cli-gravatar.</span>included (app)](#apidoc.element.ember-cli-gravatar.included)
-1.  string <span class="apidocSignatureSpan">ember-cli-gravatar.</span>name
-
-
-
-# <a name="apidoc.module.ember-cli-gravatar"></a>[module ember-cli-gravatar](#apidoc.module.ember-cli-gravatar)
-
-#### <a name="apidoc.element.ember-cli-gravatar.included"></a>[function <span class="apidocSignatureSpan">ember-cli-gravatar.</span>included (app)](#apidoc.element.ember-cli-gravatar.included)
-- description and source-code
-```javascript
-function included(app) {
-  // workaround for https://github.com/ember-cli/ember-cli/issues/3718
-  if (typeof app.import !== 'function' && app.app) {
-    app = app.app;
-  }
-  this.app = app;
-  this._super.included(app);
-
-  app.import(app.bowerDirectory + '/blueimp-md5/js/md5.js');
-  app.import('vendor/ember-cli-gravatar/md5-shim.js', {
-    type: 'vendor',
-    exports: { 'md5': ['md5'] }
-  });
-}
-```
-- example usage
-```shell
-...
-
-included: function included(app) {
-  // workaround for https://github.com/ember-cli/ember-cli/issues/3718
-  if (typeof app.import !== 'function' && app.app) {
-    app = app.app;
-  }
-  this.app = app;
-  this._super.included(app);
-
-  app.import(app.bowerDirectory + '/blueimp-md5/js/md5.js');
-  app.import('vendor/ember-cli-gravatar/md5-shim.js', {
-    type: 'vendor',
-    exports: { 'md5': ['md5'] }
-  });
-}
-...
 ```
 
 
